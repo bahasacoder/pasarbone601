@@ -20,7 +20,7 @@ const Gallery = ({ sections }: { sections: GallerySection[] }) => {
             <span className='relative z-1'>
               Explore our
               <span className='bg-primary absolute bottom-1 left-0 -z-1 h-px w-full' aria-hidden='true'></span>
-            </span>{' '}
+            </span>
             Gallery
           </h2>
           <p className='text-muted-foreground text-xl'>
