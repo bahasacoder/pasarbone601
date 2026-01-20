@@ -1,22 +1,16 @@
 import { cn } from '@/lib/utils'
 
-type GalleryImage = {
-  src: string
-  alt: string
-}
 
-type GallerySection = {
-  type?: string
-  images: GalleryImage[]
-}
 
-const Gallery = ({ sections }: { sections: GallerySection[] }) => {
+const Gallery = () => {
   return (
-    <section className="py-8 sm:py-16 lg:py-24">
-      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        Header
+    <>
+    <section>
+      <div>
+        <p>s</p>
       </div>
     </section>
+    </>
   )
 }
 
