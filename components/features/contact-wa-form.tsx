@@ -6,7 +6,7 @@ export function ContactWaForm() {
 	
 
 	const [formData, setFormData] = useState({ name:'', message:'', address:'' })
-	const actionWaContact = waContact.bind(null)
+	// const actionWaContact = waContact.bind(null)
 
 /***
   async function waContact(formData: FormData) {
@@ -22,7 +22,7 @@ export function ContactWaForm() {
 */
 return (
         <div>
-					<Form action={actionWaContact}>
+					<Form action={waContact}>
 						<div className="relative mb-4 pb-2">
 							<input type="text" id="name" placeholder=" " name="name"
 								value={formData.name}
