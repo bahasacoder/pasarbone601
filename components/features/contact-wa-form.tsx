@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Form from 'next/form';
-import { waContact } from "@/app/actions"
+import { waContact } from "@/actions"
 export function ContactWaForm() {
 	
 
