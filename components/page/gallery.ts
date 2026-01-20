@@ -2,16 +2,13 @@ import { cn } from '@/lib/utils'
 
 
 
-const Gallery = () => {
+export default function Gallery() {
   return (
-    <>
-    <section>
+    
       <div>
         <p>s</p>
       </div>
-    </section>
-    </>
+    
   )
 }
 
-export default Gallery
