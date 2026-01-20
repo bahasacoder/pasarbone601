@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export function TitlePage ({ title }) {
+export function TitlePage ({ title }: string) {
     return (
 		<div className="w-full">
 			<div className="title-bar">
