@@ -1,13 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BreadCrumbContainer } from "@/components/page/breadcrumb-container";
-import { TitlePage } from "@/components/page/title-page";
 
 export default function AboutUs() {
   return (
   <div className="w-full">
 	<div className="w-full flex items-center justify-center py-12 mx-auto font-bold text-5xl text-slate bg-stone-100"> 
-		<div className="mx-auto"><TitlePage title="About Us" /></div>
 	</div>
 	
 	<BreadCrumbContainer />
