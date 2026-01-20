@@ -1,6 +1,6 @@
 'use server';
 
-export async function waContact(userId: string, formData: FormData) {
+export async function waContact(formData: FormData) {
 	
 	const name = formData.get('name') as string
     const message = formData.get('message') as string    
