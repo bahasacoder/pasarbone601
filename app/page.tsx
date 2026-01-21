@@ -10,7 +10,7 @@ export default function Page() {
   <>
 	 
 		<h1 className="text-3xl font-bold underline bg-blue-300">
-		  Home Demo-29 Page
+		  Pasar Bone Online
 		</h1>
 		{items.itemsGrid.map((item) => (
 			<div key={item.id}>{item.title}</div>
