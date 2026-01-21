@@ -75,7 +75,7 @@ export default function ContactUs() {
 				  <h1 className="block mx-auto">*) Desa Pattiro Bajo sebelum perbatasan dengan Desa Pakkasalo Kecamatan Sibulue</h1>
 				  <div className="relative w-full mx-auto my-2 p-2 border-2 text-center flex flex-col justify-center items-center">
  					  <ResponsiveIframe 
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6687.798316734606!2d120.3739514799087!3d-4.667188210898907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbdc29e66f47ced%3A0xaead4b7c63eeabc!2sPattiro%20Bajo%2C%20Kec.%20Sibulue%2C%20Kabupaten%20Bone%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1762937584131!5m2!1sid!2sid"
+						src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6687.798316734606!2d120.3739514799087!3d-4.667188210898907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbdc29e66f47ced%3A0xaead4b7c63eeabc!2sPattiro%20Bajo%2C%20Kec.%20Sibulue%2C%20Kabupaten%20Bone%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1762937584131!5m2!1sid!2sid"}
 						title="Google Map"
 					  />
 				  </div>

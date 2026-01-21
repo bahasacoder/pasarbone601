@@ -6,7 +6,7 @@ export function ContactWaForm() {
 	
 
 	const [formData, setFormData] = useState({ name:'', message:'', address:'' })
-	const actionWaContact = waContact.bind(null)
+	// const actionWaContact = waContact.bind(null)
 
 /***
   async function waContact(formData: FormData) {
@@ -59,4 +59,3 @@ return (
 				
 				)
 };
-

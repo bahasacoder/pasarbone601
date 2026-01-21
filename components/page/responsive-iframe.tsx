@@ -1,7 +1,7 @@
 import React from "react";
 // import styles from "@/styles/map-frame.module.css"
 
-export default function ResponsiveIframe({ src, title }) {
+export default function ResponsiveIframe({ src, title }: any) {
   if (!src || typeof src !== "string") {
     console.error("Invalid iframe src provided");
     return null;
