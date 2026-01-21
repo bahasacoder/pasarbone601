@@ -10,7 +10,7 @@ export function ShopSidebar() {
 	const [isCategories, setIsCategories] = useState(true);
 	const [isPrice, setIsPrice] = useState(false);
 	const [isSupplier, setIsSupplier] = useState(false);
-	const toggleFilter = (filterName) => {
+	const toggleFilter = ({filterName}: any) => {
 		switch (filterName) {
 			case "isCategories":
 				setIsCategories(!isCategories);
