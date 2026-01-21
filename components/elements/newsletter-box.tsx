@@ -10,7 +10,7 @@ export function NewsletterBox () {
 			</div>
 			<div className="nb-middle relative w-full min-h-38 h-auto md:w-1/5 flex justify-center items-center mx-auto">
 					<Image 
-						src="/Hen_Delivery_preview.png" 
+						src="https://raw.githubusercontent.com/free-whiteboard-online/Free-Erasorio-Alternative-for-Collaborative-Design/8872ebc5d7831ed87360c2e851024cc01e38d79c/uploads/2026-01-21T05-51-22-175Z-amrrc84eh.png" 
 						alt="Hen deliver envelope" 
 						fill
 						style={{ objectFit: 'contain', borderRadius: '10px', }}
