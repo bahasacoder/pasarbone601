@@ -2,16 +2,18 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch  } from "react-redux";
 import axios from "axios";
+
 import { Button } from '@/components/ui/button';
 import { addToCart } from '@/lib/slices/cartSlice';
 import { ShoppingCart, Plus } from 'lucide-react';
 import Link from "next/link";
 import { Badge } from '@/components/ui/badge';
+import { useAppSelector } from '@/lib/hooks';
 
 function ProductList() {
     const [products, setProducts] = useState([]);
     const dispatch = useDispatch();
-     const { totalQuantity } = useSelector((state) => state.cart);
+     const { totalQuantity } = useAppSelector((state) => state.cart);
     /*
         effect
         const fetchProducts = async () => {
