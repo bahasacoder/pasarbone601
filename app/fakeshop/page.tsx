@@ -4,7 +4,7 @@ import React from "react";
 import ProductList from "@/components/products-list"
 
 
-export default function RootPage() {
+export default function ShopPage() {
   return (
     <>
         <ProductList />
