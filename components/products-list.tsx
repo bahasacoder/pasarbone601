@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch  } from "react-redux";
 import axios from "axios";
 import { Button } from '@/components/ui/button';
-import { addToCart } from '@/lib/features/cartSlice';
+import { addToCart } from '@/lib/slices/cartSlice';
 import { ShoppingCart, Plus } from 'lucide-react';
 import Link from "next/link";
 import { Badge } from '@/components/ui/badge';
