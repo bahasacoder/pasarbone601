@@ -1,6 +1,6 @@
 import React from "react";
-import CartShop from "@/components/cart-list"
-import ProductsList from "@/components/products-list"
+import CartShop from "./cart-list"
+
 
 export default function CartPage() {
   return (

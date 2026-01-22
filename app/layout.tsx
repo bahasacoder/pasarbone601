@@ -2,7 +2,7 @@ import { HeaderSection } from "@/components/sections/header-section";
 import { FooterSection } from "@/components/sections/footer-section";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import StoreProvider from "./StoreProvider"
+import ReduxProvider from "@/lib/ReduxProvider";
 
 import "@/styles/globals.css"
 // import "./globals.css";
@@ -32,11 +32,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <StoreProvider>
+        <ReduxProvider>
             <HeaderSection />
               {children}
             <FooterSection />
-        </StoreProvider>        
+          </ReduxProvider>
       </body>
     </html>
   );
