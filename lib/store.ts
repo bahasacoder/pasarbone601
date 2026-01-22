@@ -13,8 +13,8 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'
 // ... import your reducers
-import productReducer from "@/lib/features/productSlice"
-import cartReducer from "@/lib/features/cartSlice"
+import productReducer from "@/lib/slices/productSlice"
+import cartReducer from "@/lib/slices/cartSlice"
 
 const persistConfig = {
   key: "cart",
@@ -43,3 +43,4 @@ export const persistor = persistStore(store)
 export type RootState = ReturnType<typeof store.getState>;
 // Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
+
