@@ -35,7 +35,7 @@ function ProductsList() {
        
     },[])
     
-    const handleAddToCart = (product) => {
+    const handleAddToCart = ({product}: any) => {
        dispatch(addToCart(product));
     }
 
@@ -85,7 +85,7 @@ function ProductsList() {
     )
 }
 
-export default ProductList
+export default ProductsList
 
 {/*
     // https://www.geeksforgeeks.org/reactjs/fetching-data-from-an-api-with-useeffect-and-usestate-hook/ 
