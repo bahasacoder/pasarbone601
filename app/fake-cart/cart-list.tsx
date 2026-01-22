@@ -9,10 +9,11 @@ import { Separator } from '@/components/ui/separator';
 import { ShoppingCart, Trash2, Plus, Minus, ArrowLeft, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useAppSelector } from '@/lib/hooks';
 
 export default function CartShop() {
   const dispatch = useDispatch();
-  const { cartItems, totalQuantity, totalAmount } = useSelector((state) => state.cart);
+  const { cartItems, totalQuantity, totalAmount } = useAppSelector((state) => state.cart);
 
   const handleRemove = (id) => {
     dispatch(removeFromCart(id));
