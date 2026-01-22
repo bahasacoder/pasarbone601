@@ -1,7 +1,6 @@
-// app/store/store.js
-
 import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from '@reduxjs/toolkit'
+import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
 import {
   persistStore,
   persistReducer,
@@ -13,34 +12,34 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'
-import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
-import cartReducer from '@/lib/features/cartSlice';
-import wishlistReducer from "@/lib/features/wishlistSlice";
+// ... import your reducers
+import productReducer from "@/lib/features/productSlice"
+import cartReducer from "@/lib/features/cartSlice"
 
 const persistConfig = {
-    key: "root",
-    storage,
+  key: "cart",
+  storage: storage,
 };
-const persistedReducer = combineReducers({
-  cart: persistReducer(persistConfig, cartReducer),
-  //auth: authReducer
+
+const rootReducers = combineReducers({
+  cart: cartReducer,
+  product: productReducer,
 });
+const persistedReducer = persistReducer(persistConfig, rootReducers)
 
 export const store = configureStore({
-  reducer:  persistedReducer , 
-  middleware: (getDefaultMiddleware) =>
+   reducer:  persistedReducer , 
+    middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-});
+  });
 
-export const persistor = persistStore(store);
-// Infer the type of makeStore
-export type RootState = ReturnType<typeof store.getState>;
+  
+export const persistor = persistStore(store)
 // Infer the `RootState` and `AppDispatch` types from the store itself
+export type RootState = ReturnType<typeof store.getState>;
+// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;
-
-export const useAppDispatch = () => useDispatch<AppDispatch>();
-export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
