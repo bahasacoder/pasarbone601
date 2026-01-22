@@ -8,7 +8,7 @@ import { ShoppingCart, Plus } from 'lucide-react';
 import Link from "next/link";
 import { Badge } from '@/components/ui/badge';
 
-function ProductList() {
+function ProductsList() {
     const [products, setProducts] = useState([]);
     const dispatch = useDispatch();
      const { totalQuantity } = useSelector((state) => state.cart);
@@ -97,3 +97,4 @@ export default ProductList
                 .then(data => setUserList(data));
         }, []);
 */}
+
