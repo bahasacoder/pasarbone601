@@ -15,15 +15,15 @@ export default function CartShop() {
   const dispatch = useDispatch();
   const { cartItems, totalQuantity, totalAmount } = useAppSelector((state) => state.cart);
 
-  const handleRemove = (id) => {
+  const handleRemove = (id: string) => {
     dispatch(removeFromCart(id));
   };
 
-  const handleIncrement = (id) => {
+  const handleIncrement = (id: string) => {
     dispatch(updateQuantity({ id, type: 'increment' }));
   };
 
-  const handleDecrement = (id) => {
+  const handleDecrement = (id: string) => {
     dispatch(updateQuantity({ id, type: 'decrement' }));
   };
 
