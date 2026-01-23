@@ -13,17 +13,18 @@ import { useAppSelector } from '@/lib/hooks';
 
 export default function CartShop() {
   const dispatch = useDispatch();
+  
   const { cartItems, totalQuantity, totalAmount } = useAppSelector((state) => state.cart);
 
-    const handleRemove = (id: string): never => {
+  const handleRemove = (id) => {
     dispatch(removeFromCart(id));
   };
 
-  const handleIncrement = (id: string): never => {
+  const handleIncrement = (id) => {
     dispatch(updateQuantity({ id, type: 'increment' }));
   };
 
-  const handleDecrement = (id: string): never => {
+  const handleDecrement = (id) => {
     dispatch(updateQuantity({ id, type: 'decrement' }));
   };
 
