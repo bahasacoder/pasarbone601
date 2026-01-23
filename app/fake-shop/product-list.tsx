@@ -37,7 +37,7 @@ function ProductList() {
 
     },[dispatch])
     
-    const handleAddToCart = (product) => {
+    const handleAddToCart = (product: any) => {
        dispatch(addToCart(product));
     }
 
