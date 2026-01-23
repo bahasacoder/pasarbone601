@@ -1,5 +1,5 @@
 import ProductList from "./product-list"
-export default function FakePage() {
+export default function FakeShopPage() {
   return (
     <>
       <h1 className="bg-rose-400 p-4">Hello, Fake Productions</h1>
