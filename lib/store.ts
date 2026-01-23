@@ -13,8 +13,8 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage'
 // ... import your reducers
-import productReducer from "@/lib/slices/productSlice"
-import cartReducer from "@/lib/slices/cartSlice"
+import productReducer from "@/lib/features/productSlice"
+import cartReducer from "@/lib/features/cartSlice"
 
 const persistConfig = {
   key: "cart",

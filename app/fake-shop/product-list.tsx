@@ -4,7 +4,7 @@ import { useDispatch, useSelector  } from "react-redux";
 import axios from "axios";
 
 import { Button } from '@/components/ui/button';
-import { addToCart } from '@/lib/slices/cartSlice';
+import { addToCart } from '@/lib/features/cartSlice';
 import { ShoppingCart, Plus } from 'lucide-react';
 import Link from "next/link";
 import { Badge } from '@/components/ui/badge';

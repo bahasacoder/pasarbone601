@@ -2,7 +2,7 @@
 'use client';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { removeFromCart, updateQuantity, clearCart } from '@/lib/slices/cartSlice';
+import { removeFromCart, updateQuantity, clearCart } from '@/lib/features/cartSlice';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -15,7 +15,7 @@ export default function CartShop() {
   const dispatch = useDispatch();
   
   const { cartItems, totalQuantity, totalAmount } = useAppSelector((state) => state.cart);
-
+  
   const handleRemove = (id: any) => {
     dispatch(removeFromCart(id));
   };
@@ -78,7 +78,7 @@ export default function CartShop() {
               <p className="text-muted-foreground text-center max-w-md">
                 Looks like you haven't added any items to your cart yet. Start shopping to fill it up!
               </p>
-              <Link href="/fake-products">
+              <Link href="/fake-shop">
                 <Button size="lg" className="mt-4">
                   <ShoppingCart className="mr-2 h-4 w-4" />
                   Start Shopping
@@ -90,7 +90,7 @@ export default function CartShop() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Cart Items */}
             <div className="lg:col-span-2 space-y-4">
-              {cartItems.map((item) => (
+              {cartItems.map((item: any) => (
                 <Card key={item.id} className="overflow-hidden">
                   <CardContent className="p-4">
                     <div className="flex gap-4">
