@@ -14,16 +14,16 @@ import { useAppSelector } from '@/lib/hooks';
 export default function CartShop() {
   const dispatch = useDispatch();
   const { cartItems, totalQuantity, totalAmount } = useAppSelector((state) => state.cart);
-  let id = id | null;
-  const handleRemove = (id: string) => {
+
+    const handleRemove = (id: any) => {
     dispatch(removeFromCart(id));
   };
 
-  const handleIncrement = (id: string) => {
+  const handleIncrement = (id: any) => {
     dispatch(updateQuantity({ id, type: 'increment' }));
   };
 
-  const handleDecrement = (id: string) => {
+  const handleDecrement = (id: any) => {
     dispatch(updateQuantity({ id, type: 'decrement' }));
   };
 
