@@ -8,11 +8,11 @@ import { addToCart } from '@/lib/features/cartSlice';
 import { ShoppingCart, Plus } from 'lucide-react';
 import Link from "next/link";
 import { Badge } from '@/components/ui/badge';
-import { useAppSelector } from '@/lib/hooks';
+import { useAppSelector, useAppDispatch } from '@/lib/hooks';
 
 function ProductList() {
     const [products, setProducts] = useState([]);
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
      const { totalQuantity } = useAppSelector((state) => state.cart);
     /*
         effect
