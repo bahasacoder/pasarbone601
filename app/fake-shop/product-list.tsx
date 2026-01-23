@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector  } from "react-redux";
 import axios from "axios";
-
+import { fetchProducts } from "@/lib/features/productSlice";
 import { Button } from '@/components/ui/button';
 import { addToCart } from '@/lib/features/cartSlice';
 import { ShoppingCart, Plus } from 'lucide-react';
@@ -30,12 +30,12 @@ function ProductList() {
             axios.get('https://fakestoreapi.com/products')
             .then(response => setProducts(response.data));
         }
-        fetchProducts()
+        //fetchProducts()
 
       
-        dispatch(fetchProducts);
+        dispatch(fetchProducts());
        
-    },[])
+    },[dispatch])
     
     const handleAddToCart = (product) => {
        dispatch(addToCart(product));
