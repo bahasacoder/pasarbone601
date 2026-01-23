@@ -2,6 +2,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { useEffect, useState } from "react";
 
+  interface CartItems {
+    id: string;
+          name: string,
+          price: number,
+          image: string,
+          quantity: number,
+          totalPrice: number,
+  }
+
 
 const cartSlice = createSlice({
   name: 'cart',

@@ -15,7 +15,7 @@ export default function CartShop() {
   const dispatch = useDispatch();
   
   const { cartItems, totalQuantity, totalAmount } = useAppSelector((state) => state.cart);
-
+  
   const handleRemove = (id) => {
     dispatch(removeFromCart(id));
   };
