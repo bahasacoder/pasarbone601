@@ -29,12 +29,12 @@ function ProductList() {
         const fetchProducts = async () => {
             axios.get('https://fakestoreapi.com/products')
             .then(response => setProducts(response.data));
+            return { type: 'FETCH_DATA_SUCCESS' }
         }
-        //fetchProducts()
+        //fetchProducts()     
+        //dispatch(fetchProducts());
+       fetchProducts().then(action => dispatch(action));
 
-      
-        dispatch(fetchProducts());
-       
     },[dispatch])
     
     const handleAddToCart = (product) => {
