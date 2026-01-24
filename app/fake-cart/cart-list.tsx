@@ -58,7 +58,7 @@ export default function CartShop() {
               {totalQuantity} {totalQuantity === 1 ? 'item' : 'items'} in your cart
             </p>
           </div>
-          {items.length > 0 && (
+          {item.length > 0 && (
             <Button
               variant="destructive"
               onClick={handleClearCart}
