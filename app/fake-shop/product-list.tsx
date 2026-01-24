@@ -16,7 +16,7 @@ function ProductList() {
     const dispatch = useAppDispatch();
      const { totalQuantity } = useAppSelector((state) => state.cart);
     
-    const handleAddToCart = (item) => {
+    const handleAddToCart = (item:any) => {
        dispatch(addToCart(item));
     }
 
