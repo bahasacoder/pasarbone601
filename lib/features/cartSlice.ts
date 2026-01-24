@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const cartSlice = createSlice({
   name: 'cart',
   initialState: {
-    cartItems: [],
+    items: [],
     totalQuantity: 0,
     totalAmount: 0,
   },
