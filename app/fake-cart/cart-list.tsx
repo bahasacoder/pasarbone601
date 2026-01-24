@@ -70,7 +70,7 @@ export default function CartShop() {
           )}
         </div>
 
-        {items.length === 0 ? (
+        {item.length === 0 ? (
           <Card className="py-16">
             <CardContent className="flex flex-col items-center justify-center space-y-4">
               <ShoppingBag className="h-24 w-24 text-muted-foreground/50" />
@@ -90,7 +90,7 @@ export default function CartShop() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Cart Items */}
             <div className="lg:col-span-2 space-y-4">
-              {items.map((item: any) => (
+              {item.map((item: any) => (
                 <Card key={item.id} className="overflow-hidden">
                   <CardContent className="p-4">
                     <div className="flex gap-4">
