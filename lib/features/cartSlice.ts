@@ -13,13 +13,13 @@ const cartSlice = createSlice({
   reducers: {
     addToCart(state, action) {
       const newItem = action.payload;
-      const existingItem = state.cartItems.find(item => item.id === newItem.id);
+      const existingItem = state.items.find(item => item.id === newItem.id);
       
       if (existingItem) {
         existingItem.quantity++;
         existingItem.totalPrice += newItem.price;
       } else {
-        state.cartItems.push({
+        state.items.push({
           id: newItem.id,
           name: newItem.name,
           price: newItem.price,
@@ -35,18 +35,18 @@ const cartSlice = createSlice({
     },
     removeFromCart(state, action) {
       const id = action.payload;
-      const existingItem = state.cartItems.find(item => item.id === id);
+      const existingItem = state.items.find(item => item.id === id);
       
       if (existingItem) {
         state.totalQuantity -= existingItem.quantity;
         state.totalAmount -= existingItem.totalPrice;
-        state.cartItems = state.cartItems.filter(item => item.id !== id);
+        state.cartItems = state.items.filter(item => item.id !== id);
       }
 
     },
     updateQuantity(state, action) {
       const { id, type } = action.payload;
-      const existingItem = state.cartItems.find(item => item.id === id);
+      const existingItem = state.items.find(item => item.id === id);
       
       if (existingItem) {
         if (type === 'increment') {
@@ -63,7 +63,7 @@ const cartSlice = createSlice({
       }
     },
     clearCart(state) {
-      state.cartItems = [];
+      state.items = [];
       state.totalQuantity = 0;
       state.totalAmount = 0;
     },
