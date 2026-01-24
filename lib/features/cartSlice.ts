@@ -1,6 +1,14 @@
 // /app/store/cartSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
+interface Item {
+  id: string; // or string, depending on your data
+  name: string;
+  price: number;
+  quantity: number;
+}
+
+
 const cartSlice = createSlice({
   name: 'cart',
   initialState: {
