@@ -9,33 +9,12 @@ import { ShoppingCart, Plus } from 'lucide-react';
 import Link from "next/link";
 import { Badge } from '@/components/ui/badge';
 import { useAppSelector, useAppDispatch } from '@/lib/hooks';
+import items from "@/db/items.json";
 
 function ProductList() {
     const [products, setProducts] = useState([]);
     const dispatch = useAppDispatch();
      const { totalQuantity } = useAppSelector((state) => state.cart);
-    /*
-        effect
-        const fetchProducts = async () => {
-            axios.get('https://fakestoreapi.com/products')
-            .then(response => setProducts(response.data));
-        }
-        fetchProducts()
-    */
-    //const {items:products, status} = useSelector((state)=>state.products)
-    //const dispatch = useDispatch();
-       
-    useEffect(()=>{
-        const fetchProducts = async () => {
-            axios.get('https://fakestoreapi.com/products')
-            .then(response => setProducts(response.data));
-            return { type: 'FETCH_DATA_SUCCESS' }
-        }
-        //fetchProducts()     
-        //dispatch(fetchProducts());
-       fetchProducts().then(action => dispatch(action));
-
-    },[dispatch])
     
     const handleAddToCart = (product: any) => {
        dispatch(addToCart(product));
@@ -66,14 +45,12 @@ function ProductList() {
             
 
             <h1>Product List Page</h1>
-            
-            {products.map(product => (
-                <div key={product.id}>
-                <img src={product.image} alt="image title" />
-                <h2>{product.title.length > 20 ? `${product.title.slice(0, 20)}...` : product.title }</h2>
-                <p>Price : ${product.price}</p>
+            {items.itemsGrid.map((item) => (
+                <div key={item.id}>
+                <img src={item.image} alt="image title" />
+                <p>Price : ${item.price}</p>
                 <Button
-                              onClick={() => handleAddToCart(product)}
+                              onClick={() => handleAddToCart(item)}
                               className="w-full"
                               size="lg"
                             >
