@@ -12,7 +12,7 @@ interface Item {
 const cartSlice = createSlice({
   name: 'cart',
   initialState: {
-    items: [],
+    item: [],
     totalQuantity: 0,
     totalAmount: 0,
   },
