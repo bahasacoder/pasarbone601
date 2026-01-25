@@ -8,11 +8,11 @@ import { addToCart } from '@/lib/features/cartSlice';
 import { ShoppingCart, Plus } from 'lucide-react';
 import Link from "next/link";
 import { Badge } from '@/components/ui/badge';
-import { useAppSelector } from '@/lib/hooks';
+import { useAppSelector, useAppDispatch } from '@/lib/hooks';
 
 function ProductList() {
     const [products, setProducts] = useState([]);
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
      const { totalQuantity } = useAppSelector((state) => state.cart);
     /*
         effect
@@ -29,15 +29,15 @@ function ProductList() {
         const fetchProducts = async () => {
             axios.get('https://fakestoreapi.com/products')
             .then(response => setProducts(response.data));
+            return { type: 'FETCH_DATA_SUCCESS' }
         }
-        //fetchProducts()
+        //fetchProducts()     
+        //dispatch(fetchProducts());
+       fetchProducts().then(action => dispatch(action));
 
-      
-        dispatch(fetchProducts());
-       
     },[dispatch])
     
-    const handleAddToCart = (product) => {
+    const handleAddToCart = (product: any) => {
        dispatch(addToCart(product));
     }
 
