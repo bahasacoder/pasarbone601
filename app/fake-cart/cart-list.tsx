@@ -202,7 +202,7 @@ export default function CartShop() {
                   <Button className="w-full" size="lg">
                     Proceed to Checkout
                   </Button>
-                  <Link href="/" className="w-full">
+                  <Link href="/fake-shop" className="w-full">
                     <Button variant="outline" className="w-full">
                       <ArrowLeft className="mr-2 h-4 w-4" />
                       Continue Shopping

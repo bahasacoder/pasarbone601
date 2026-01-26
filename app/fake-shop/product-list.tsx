@@ -10,7 +10,7 @@ import Link from "next/link";
 import { Badge } from '@/components/ui/badge';
 import { useAppSelector, useAppDispatch } from '@/lib/hooks';
 
-function ProductList() {
+function ProductList({product}: any) {
     const [products, setProducts] = useState([]);
     const dispatch = useAppDispatch();
      const { totalQuantity } = useAppSelector((state) => state.cart);
