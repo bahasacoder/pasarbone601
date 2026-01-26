@@ -58,7 +58,7 @@ export default function CartShop() {
               {totalQuantity} {totalQuantity === 1 ? 'item' : 'items'} in your cart
             </p>
           </div>
-          {cartItems.length > 0 && (
+          {product.length > 0 && (
             <Button
               variant="destructive"
               onClick={handleClearCart}
@@ -70,7 +70,7 @@ export default function CartShop() {
           )}
         </div>
 
-        {cartItems.length === 0 ? (
+        {product.length === 0 ? (
           <Card className="py-16">
             <CardContent className="flex flex-col items-center justify-center space-y-4">
               <ShoppingBag className="h-24 w-24 text-muted-foreground/50" />
@@ -90,7 +90,7 @@ export default function CartShop() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Cart Items */}
             <div className="lg:col-span-2 space-y-4">
-              {cartItems.map((item: any) => (
+              {product.map((item: any) => (
                 <Card key={item.id} className="overflow-hidden">
                   <CardContent className="p-4">
                     <div className="flex gap-4">
