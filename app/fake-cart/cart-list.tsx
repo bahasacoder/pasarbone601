@@ -14,7 +14,7 @@ import { useAppSelector } from '@/lib/hooks';
 export default function CartShop() {
   const dispatch = useDispatch();
   
-  const { cartItems, totalQuantity, totalAmount } = useAppSelector((state) => state.cart);
+  const { product, totalQuantity, totalAmount } = useAppSelector((state) => state.cart);
   
   const handleRemove = (id: any) => {
     dispatch(removeFromCart(id));
