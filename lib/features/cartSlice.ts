@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const cartSlice = createSlice({
   name: 'cart',
   initialState: {
-    cartItems: [],
+    product: [],
     totalQuantity: 0,
     totalAmount: 0,
   },
@@ -13,7 +13,7 @@ const cartSlice = createSlice({
   reducers: {
     addToCart(state, action) {
       const newItem = action.payload;
-      const existingItem = state.cartItems.find(item => item.id === newItem.id);
+      const existingItem = state.product.find(item => item.id === newItem.id);
       
       if (existingItem) {
         existingItem.quantity++;
@@ -35,7 +35,7 @@ const cartSlice = createSlice({
     },
     removeFromCart(state, action) {
       const id = action.payload;
-      const existingItem = state.cartItems.find(item => item.id === id);
+      const existingItem = state.product.find(item => item.id === id);
       
       if (existingItem) {
         state.totalQuantity -= existingItem.quantity;
@@ -46,7 +46,7 @@ const cartSlice = createSlice({
     },
     updateQuantity(state, action) {
       const { id, type } = action.payload;
-      const existingItem = state.cartItems.find(item => item.id === id);
+      const existingItem = state.product.find(item => item.id === id);
       
       if (existingItem) {
         if (type === 'increment') {
@@ -63,7 +63,7 @@ const cartSlice = createSlice({
       }
     },
     clearCart(state) {
-      state.cartItems = [];
+      state.product = [];
       state.totalQuantity = 0;
       state.totalAmount = 0;
     },
