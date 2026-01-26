@@ -67,7 +67,7 @@ function ProductList() {
 
             <h1>Product List Page</h1>
             
-            {products.map(product => (
+            {products.map((product: any) => (
                 <div key={product.id}>
                 <img src={product.image} alt="image title" />
                 <h2>{product.title.length > 20 ? `${product.title.slice(0, 20)}...` : product.title }</h2>

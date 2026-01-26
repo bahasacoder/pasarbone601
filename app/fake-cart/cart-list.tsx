@@ -41,7 +41,7 @@ export default function CartShop() {
             <ShoppingCart className="h-8 w-8 text-primary" />
             <h1 className="text-2xl font-bold">ShopHub</h1>
           </div>
-          <Link href="/fake-products">
+          <Link href="/fake-shop">
             <Button variant="outline">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Continue Shopping
